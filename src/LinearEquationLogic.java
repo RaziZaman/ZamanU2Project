@@ -22,17 +22,14 @@ public class LinearEquationLogic {
         restart();
     }
     private void restart() {
-        int loop = 0;
-        while (loop != 1) {
-            scan.nextLine();
-            System.out.print("\nDo you want to repeat the process for another pair of coordinates? (yes/no) ");
-            String choice = scan.nextLine();
-            if (choice.equals("no")) {
-                loop = 1;
-            } else {
-                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-                start();
-            }
+        scan.nextLine();
+        System.out.print("\nDo you want to repeat the process for another pair of coordinates? (yes/no) ");
+        String choice = scan.nextLine();
+        if (!choice.equals("no")) {
+            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            start();
+        } else {
+            System.out.printf("Goodbye!");
         }
     }
     private int getX(String coords) {
